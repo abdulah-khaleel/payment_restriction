@@ -14,7 +14,7 @@
         'views/res_users.xml',
     ],
     "images": [
-        'images/main_screenshot.png'
+        'images/main__screenshot.png'
         ],
     "installable": True,
 }
