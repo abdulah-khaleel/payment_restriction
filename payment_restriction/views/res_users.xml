@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_users_form_extended_iwa" model="ir.ui.view">
+            <field name="name">view.users.form.extended.iwa</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='access_rights']" position="after">
+                    <page name="payment_restriction" string="Payment Methods Restriction">
+                        <group>
+                            <field name="restrict_payment"/>
+                            <field name="journal_ids" widget="many2many_tags" attrs="{'invisible': [('restrict_payment','=', False)]}"/>
+                        </group>
+                    </page>
+                </xpath>  
+            </field>
+          </record>
+    </data>
+  </odoo>
